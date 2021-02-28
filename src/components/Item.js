@@ -1,15 +1,17 @@
 import React from 'react';
 import {ListItem, Thumbnail, Text, Left, Body} from 'native-base';
 
-const ItemComponent = () => {
+const ItemComponent = ({avatar_url, login, node_id, id}) => {
   return (
     <ListItem avatar>
       <Left>
-        <Thumbnail source={{uri: 'Image URL'}} />
+        <Thumbnail source={{uri: avatar_url}} />
       </Left>
       <Body>
-        <Text>Kumar Pratik</Text>
-        <Text note>Doing what you like will always keep you happy . .</Text>
+        <Text>{login}</Text>
+        <Text note>
+          User ID: {id} and NODE_ID: {node_id}
+        </Text>
       </Body>
     </ListItem>
   );
